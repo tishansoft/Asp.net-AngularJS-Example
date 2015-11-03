@@ -1,0 +1,12 @@
+D:\Training\GeneralUnitOfWorkRepository\Source\Repository.Pattern\bin\x86\Release\Repository.Pattern.dll.config
+D:\Training\GeneralUnitOfWorkRepository\Source\Repository.Pattern\bin\x86\Release\Repository.Pattern.dll
+D:\Training\GeneralUnitOfWorkRepository\Source\Repository.Pattern\bin\x86\Release\Repository.Pattern.pdb
+D:\Training\GeneralUnitOfWorkRepository\Source\Repository.Pattern\obj\x86\Release\Repository.Pattern.csprojResolveAssemblyReference.cache
+D:\Training\GeneralUnitOfWorkRepository\Source\Repository.Pattern\obj\x86\Release\Repository.Pattern.dll
+D:\Training\GeneralUnitOfWorkRepository\Source\Repository.Pattern\obj\x86\Release\Repository.Pattern.pdb
+D:\Training\VS2015\GeneralRepository\Source\Repository.Pattern\obj\x86\Release\Repository.Pattern.csprojResolveAssemblyReference.cache
+D:\Training\VS2015\GeneralRepository\Source\Repository.Pattern\obj\x86\Release\Repository.Pattern.dll
+D:\Training\VS2015\GeneralRepository\Source\Repository.Pattern\obj\x86\Release\Repository.Pattern.pdb
+D:\Training\VS2015\GeneralRepository\Source\Repository.Pattern\bin\x86\Release\Repository.Pattern.dll.config
+D:\Training\VS2015\GeneralRepository\Source\Repository.Pattern\bin\x86\Release\Repository.Pattern.dll
+D:\Training\VS2015\GeneralRepository\Source\Repository.Pattern\bin\x86\Release\Repository.Pattern.pdb

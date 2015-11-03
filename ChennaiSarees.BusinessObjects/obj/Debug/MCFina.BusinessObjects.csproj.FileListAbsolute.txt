@@ -1,0 +1,21 @@
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\bin\Debug\MCFina.BusinessObjects.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\bin\Debug\MCFina.BusinessObjects.pdb
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\bin\Debug\DataAnnotationsExtensions.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\bin\Debug\MVC Foolproof Validation.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\obj\Debug\MCFina.BusinessObjects.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\obj\Debug\MCFina.BusinessObjects.pdb
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\obj\Debug\MCFina.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\MCFina.BusinessObjects.dll.config
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\MCFina.BusinessObjects.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\MCFina.BusinessObjects.pdb
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\DataAnnotationsExtensions.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\EntityFramework.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\EntityFramework.SqlServer.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\ExpressiveAnnotations.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\MVC Foolproof Validation.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\EntityFramework.xml
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\EntityFramework.SqlServer.xml
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Debug\ExpressiveAnnotations.xml
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\obj\Debug\MCFina.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\obj\Debug\MCFina.BusinessObjects.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\obj\Debug\MCFina.BusinessObjects.pdb

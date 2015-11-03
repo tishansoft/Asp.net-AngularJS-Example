@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="form-group col-xs-2">
+                    <label for="productNameFilter">Product Name:</label>
+                    <input type="text" class="form-control" name="productNameFilter" id="productNameFilter" ng-model="vm.productNameFilter">
+                </div>
+                <div class="form-group col-xs-2">
+                    <label for="productUnitPriceFilter">Unit Price:</label>
+                    <input type="text" class="form-control"  name="productUnitPriceFilter" id="productUnitPriceFilter" ng-model="vm.productUnitPriceFilter">
+                </div>
+            </div>
+            <div class="col-sm-12 padding-right">
+                    <div class="features_items">
+                        <!--features_items-->
+                        <h2 class="title text-center">Features Items : ({{vm.filteredProducts.length}})</h2>
+                        <div class="col-sm-4" ng-repeat="x in vm.filteredProducts = (vm.products | productsFilter:{unitPrice : vm.productUnitPriceFilter , productName: vm.productNameFilter})">
+                            <div class="product-image-wrapper" ng-controller="shoppingCartCtrl as vm">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="~/images/home/product1.jpg" alt="" />
+                                        <h2>{{x.UnitPrice | currency:'£'}}</h2>
+                                        <p>{{x.ProductName}}&nbsp;({{x.QuantityPerUnit}})</p>
+                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                    </div>
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h2>{{x.UnitPrice | currency:'£'}}</h2>
+                                            <p>{{x.ProductName}}&nbsp;({{x.QuantityPerUnit}})</p>
+                                            <a href="#" class="btn btn-default add-to-cart" ng-click="vm.addToCart(x)"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="choose">
+                                    <ul class="nav nav-pills nav-justified">
+                                        <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                        <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--features_items-->
+                </div>
+            </div>
+    </div>
+</section>

@@ -1,0 +1,34 @@
+D:\Customers\Order-Eat.Today\Application\OrderEat.Infrastructure\OrderEat.BusinessObjects\bin\Debug\OrderEat.BusinessObjects.dll
+D:\Customers\Order-Eat.Today\Application\OrderEat.Infrastructure\OrderEat.BusinessObjects\bin\Debug\OrderEat.BusinessObjects.pdb
+D:\Customers\Order-Eat.Today\Application\OrderEat.Infrastructure\OrderEat.BusinessObjects\bin\Debug\DataAnnotationsExtensions.dll
+D:\Customers\Order-Eat.Today\Application\OrderEat.Infrastructure\OrderEat.BusinessObjects\bin\Debug\MVC Foolproof Validation.dll
+D:\Customers\Order-Eat.Today\Application\OrderEat.Infrastructure\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.Resources.ApplicationMessages.resources
+D:\Customers\Order-Eat.Today\Application\OrderEat.Infrastructure\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.csproj.GenerateResource.Cache
+D:\Customers\Order-Eat.Today\Application\OrderEat.Infrastructure\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.dll
+D:\Customers\Order-Eat.Today\Application\OrderEat.Infrastructure\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.pdb
+D:\Customers\Order-Eat.Today\Application\OrderEat.BusinessObjects\bin\Debug\OrderEat.BusinessObjects.dll
+D:\Customers\Order-Eat.Today\Application\OrderEat.BusinessObjects\bin\Debug\OrderEat.BusinessObjects.pdb
+D:\Customers\Order-Eat.Today\Application\OrderEat.BusinessObjects\bin\Debug\DataAnnotationsExtensions.dll
+D:\Customers\Order-Eat.Today\Application\OrderEat.BusinessObjects\bin\Debug\MVC Foolproof Validation.dll
+D:\Customers\Order-Eat.Today\Application\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Customers\Order-Eat.Today\Application\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.Resources.ApplicationMessages.resources
+D:\Customers\Order-Eat.Today\Application\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.csproj.GenerateResource.Cache
+D:\Customers\Order-Eat.Today\Application\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.dll
+D:\Customers\Order-Eat.Today\Application\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.pdb
+D:\Projects\OrderEat.BusinessObjects\bin\Debug\OrderEat.BusinessObjects.dll
+D:\Projects\OrderEat.BusinessObjects\bin\Debug\OrderEat.BusinessObjects.pdb
+D:\Projects\OrderEat.BusinessObjects\bin\Debug\DataAnnotationsExtensions.dll
+D:\Projects\OrderEat.BusinessObjects\bin\Debug\MVC Foolproof Validation.dll
+D:\Projects\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.Resources.ApplicationMessages.resources
+D:\Projects\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.csproj.GenerateResource.Cache
+D:\Projects\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.dll
+D:\Projects\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.pdb
+E:\Gopi\Projects\OrderEat\Application\OrderEat\OrderEat.BusinessObjects\bin\Debug\OrderEat.BusinessObjects.dll
+E:\Gopi\Projects\OrderEat\Application\OrderEat\OrderEat.BusinessObjects\bin\Debug\OrderEat.BusinessObjects.pdb
+E:\Gopi\Projects\OrderEat\Application\OrderEat\OrderEat.BusinessObjects\bin\Debug\DataAnnotationsExtensions.dll
+E:\Gopi\Projects\OrderEat\Application\OrderEat\OrderEat.BusinessObjects\bin\Debug\MVC Foolproof Validation.dll
+E:\Gopi\Projects\OrderEat\Application\OrderEat\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.csprojResolveAssemblyReference.cache
+E:\Gopi\Projects\OrderEat\Application\OrderEat\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.Resources.ApplicationMessages.resources
+E:\Gopi\Projects\OrderEat\Application\OrderEat\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.csproj.GenerateResource.Cache
+E:\Gopi\Projects\OrderEat\Application\OrderEat\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.dll
+E:\Gopi\Projects\OrderEat\Application\OrderEat\OrderEat.BusinessObjects\obj\Debug\OrderEat.BusinessObjects.pdb

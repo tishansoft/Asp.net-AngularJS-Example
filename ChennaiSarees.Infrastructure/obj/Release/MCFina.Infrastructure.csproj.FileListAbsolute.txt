@@ -1,0 +1,106 @@
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\MCFina.Infrastructure.dll.config
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\MCFina.Infrastructure.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\MCFina.Infrastructure.pdb
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\AutoMapper.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\AutoMapper.Net4.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\FluentValidation.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\FluentValidation.Mvc.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\log4net.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\Mail4Net.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\Microsoft.Web.Infrastructure.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\Newtonsoft.Json.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Net.Http.Formatting.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Helpers.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Http.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Http.WebHost.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Mvc.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Razor.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.Deployment.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.Razor.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\AutoMapper.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\FluentValidation.pdb
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\FluentValidation.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\FluentValidation.Mvc.pdb
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\log4net.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\Mail4Net.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\Newtonsoft.Json.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Net.Http.Formatting.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Helpers.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Http.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Http.WebHost.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Mvc.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Razor.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.Deployment.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.Razor.xml
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\da\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\de\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\es\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\fi\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\fr\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\it\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\ko\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\nl\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\pl\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\pt\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\ru\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\sv\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\bin\Release\tr\FluentValidation.resources.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\obj\Release\MCFina.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\obj\Release\MCFina.Infrastructure.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.Infrastructure\obj\Release\MCFina.Infrastructure.pdb
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\MCFina.Infrastructure.dll.config
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\MCFina.Infrastructure.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\MCFina.Infrastructure.pdb
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\AutoMapper.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\AutoMapper.Net4.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\FluentValidation.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\FluentValidation.Mvc.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\log4net.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\Mail4Net.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\Newtonsoft.Json.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Net.Http.Formatting.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Helpers.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Http.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Http.WebHost.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Mvc.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Razor.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.Deployment.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.Razor.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\AutoMapper.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\FluentValidation.pdb
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\FluentValidation.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\FluentValidation.Mvc.pdb
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\log4net.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\Mail4Net.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\Newtonsoft.Json.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Net.Http.Formatting.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Helpers.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Http.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Http.WebHost.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Mvc.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.Razor.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.Deployment.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\System.Web.WebPages.Razor.xml
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\da\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\de\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\es\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\fi\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\fr\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\it\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\ko\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\nl\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\pl\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\pt\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\ru\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\sv\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\bin\Release\tr\FluentValidation.resources.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\obj\Release\MCFina.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\obj\Release\MCFina.Infrastructure.dll
+D:\Clients\MCFina\Development\Main\MCFina.Infrastructure\obj\Release\MCFina.Infrastructure.pdb

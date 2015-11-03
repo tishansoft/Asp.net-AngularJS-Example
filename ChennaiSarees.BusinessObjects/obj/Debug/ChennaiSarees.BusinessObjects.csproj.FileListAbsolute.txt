@@ -1,0 +1,32 @@
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\ChennaiSarees.BusinessObjects.dll.config
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\ChennaiSarees.BusinessObjects.dll
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\ChennaiSarees.BusinessObjects.pdb
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\DataAnnotationsExtensions.dll
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\EntityFramework.dll
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\EntityFramework.SqlServer.dll
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\MVC Foolproof Validation.dll
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\Repository.Pattern.dll
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\Repository.Pattern.Ef6.dll
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\LinqKit.dll
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\Repository.Pattern.Ef6.pdb
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\Repository.Pattern.pdb
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\EntityFramework.xml
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\EntityFramework.SqlServer.xml
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\obj\Debug\ChennaiSarees.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\obj\Debug\ChennaiSarees.BusinessObjects.dll
+D:\Training\VS2015\GeneralRepository\Sample\ChennaiSarees.BusinessObjects\obj\Debug\ChennaiSarees.BusinessObjects.pdb
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Debug\ChennaiSarees.BusinessObjects.dll.config
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Debug\ChennaiSarees.BusinessObjects.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Debug\ChennaiSarees.BusinessObjects.pdb
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Debug\DataAnnotationsExtensions.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Debug\EntityFramework.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Debug\EntityFramework.SqlServer.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Debug\MVC Foolproof Validation.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Debug\EntityFramework.xml
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Debug\EntityFramework.SqlServer.xml
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\obj\Debug\ChennaiSarees.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\obj\Debug\ChennaiSarees.BusinessObjects.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\obj\Debug\ChennaiSarees.BusinessObjects.pdb

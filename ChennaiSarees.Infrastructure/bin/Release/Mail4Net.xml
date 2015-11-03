@@ -1,0 +1,1353 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mail4Net</name>
+    </assembly>
+    <members>
+        <member name="T:Mail4Net.Client.EmlClient">
+             <summary>
+             EML Client.
+             </summary>
+             <remarks>
+             <para>
+             The EmlClient overloads the Send event, allowing the email to be saved to a file in EML format.
+             This requires a separate process to send the email.
+            </para>
+             <para>The following settings can be added to the config file's AppSettings tag:</para>
+             <list type="table">
+             <listheader>
+               <term>Value</term>
+               <description>Settings</description>
+             </listheader>
+             <item>
+               <term>attachmentFolder</term>
+               <description>The default folder location used to save emails.</description>
+             </item>
+             </list>
+             </remarks>
+             <example>
+             <code>
+             &lt;appSettings&gt;
+               &lt;add key="attachmentFolder" value="C:\Mail4Net\Emails" /&gt;
+             &lt;/appSettings&gt;
+             </code>
+             </example>
+        </member>
+        <member name="T:Mail4Net.Interface.ISmtpClient">
+            <summary>
+            Interface ISmtpClient
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Interface.ISmtpClient.Send(System.Net.Mail.MailMessage)">
+            <summary>
+            Send email message.
+            </summary>
+            <param name="message">MailMessage object to send</param>
+        </member>
+        <member name="M:Mail4Net.Interface.ISmtpClient.Send(System.String,System.String,System.String,System.String)">
+            <summary>
+            Send mail message.
+            </summary>
+            <param name="from">Address of the email sender</param>
+            <param name="recipients">Email addresses of the message recipients</param>
+            <param name="subject">Email message subject line</param>
+            <param name="body">Email message body text</param>
+        </member>
+        <member name="T:Mail4Net.Interface.IFileClient">
+            <summary>
+            Interface IFileClient
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Interface.IFileClient.Send(System.Net.Mail.MailMessage,System.String)">
+            <summary>
+            Save the email as an EML file.
+            </summary>
+            <param name="message">The MailMessage object to be saved.</param>
+            <param name="filename">The name that the file is to be saved as.</param>
+        </member>
+        <member name="M:Mail4Net.Interface.IFileClient.Send(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Save the email as an EML file.
+            </summary>
+            <param name="from">Address email is from</param>
+            <param name="recipients">Address of recipient</param>
+            <param name="subject">Email message subject</param>
+            <param name="body">Email message body</param>
+            <param name="filename">The name that the file is to be saved as.</param>
+        </member>
+        <member name="M:Mail4Net.Client.EmlClient.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Client.EmlClient"/> class.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Client.EmlClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Client.EmlClient"/> class.
+            </summary>
+            <param name="folder">The folder.</param>
+        </member>
+        <member name="M:Mail4Net.Client.EmlClient.Send(System.Net.Mail.MailMessage)">
+            <summary>
+            Send email message.
+            </summary>
+            <param name="message">MailMessage object to send</param>
+        </member>
+        <member name="M:Mail4Net.Client.EmlClient.Send(System.Net.Mail.MailMessage,System.String)">
+            <summary>
+            Save the email as an EML file.
+            </summary>
+            <param name="message">The MailMessage object to be saved.</param>
+            <param name="filename">The name that the file is to be saved as.</param>
+            <exception cref="T:System.IO.IOException">Folder has not been set
+            or</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException"></exception>
+            <exception cref="T:System.UnauthorizedAccessException">Unable to save email message as EML file</exception>
+            <exception cref="T:System.Net.Mail.SmtpException">Unable to save email message as EML file</exception>
+        </member>
+        <member name="M:Mail4Net.Client.EmlClient.Send(System.String,System.String,System.String,System.String)">
+            <summary>
+            Send mail message.
+            </summary>
+            <param name="from">Address of the email sender</param>
+            <param name="recipients">Email addresses of the message recipients</param>
+            <param name="subject">Email message subject line</param>
+            <param name="body">Email message body text</param>
+        </member>
+        <member name="M:Mail4Net.Client.EmlClient.Send(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Save the email as an EML file.
+            </summary>
+            <param name="from">Address email is from</param>
+            <param name="recipients">Address of recipient</param>
+            <param name="subject">Email message subject</param>
+            <param name="body">Email message body</param>
+            <param name="filename">The name that the file is to be saved as.</param>
+        </member>
+        <member name="P:Mail4Net.Client.EmlClient.Folder">
+            <summary>
+            Gets or sets the folder.
+            </summary>
+            <value>The folder.</value>
+        </member>
+        <member name="T:Mail4Net.Client.FakeClient">
+            <summary>
+            Fake SMTP client.
+            Allows unit testing of emails by replacing the SMTP Client used.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Client.FakeClient.Messages">
+            <summary>
+            The list of messages
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Client.FakeClient.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Client.FakeClient"/> class.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Client.FakeClient.Clear">
+            <summary>
+            Clear messages.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Client.FakeClient.Count">
+            <summary>
+            Count messages.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Client.FakeClient.Send(System.Net.Mail.MailMessage)">
+            <summary>
+            Send email message.
+            </summary>
+            <param name="message">MailMessage object to send</param>
+        </member>
+        <member name="M:Mail4Net.Client.FakeClient.Send(System.String,System.String,System.String,System.String)">
+            <summary>
+            Send mail message.
+            </summary>
+            <param name="from">Address of the email sender</param>
+            <param name="recipients">Email addresses of the message recipients</param>
+            <param name="subject">Email message subject line</param>
+            <param name="body">Email message body text</param>
+        </member>
+        <member name="P:Mail4Net.Client.FakeClient.MailSent">
+            <summary>
+            Gets or sets a value indicating whether [mail sent].
+            </summary>
+            <value><c>true</c> if [mail sent]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Mail4Net.Client.FakeClient.Item(System.Int32)">
+            <summary>
+            Return MailMessage from specific index.
+            </summary>
+            <param name="index">Index of keyword</param>
+            <returns>Keyword from specified position</returns>
+        </member>
+        <member name="T:Mail4Net.Client.MsgClient">
+            <summary>
+            MSG Client.
+            </summary>
+            <remarks>
+            The MsgClient overloads the Send event, allowing the email to be saved to a file in MSG format.
+            This requires a separate process to send the email.
+            </remarks>
+        </member>
+        <member name="M:Mail4Net.Client.MsgClient.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+            <Remarks>
+            This will use the default folder, specified in the config file.
+            </Remarks>
+        </member>
+        <member name="M:Mail4Net.Client.MsgClient.#ctor(System.String)">
+            <summary>
+            Overloaded constructor
+            </summary>
+            <param name="folder">folder to store files.</param>
+            <Remarks>
+            This will use the folder specified in the parameters.
+            </Remarks>
+        </member>
+        <member name="P:Mail4Net.Client.MsgClient.Folder">
+            <summary>
+            Get or Set the folder to save files to.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Client.SendingOptions">
+             <summary>
+             The Sending Options class.
+             </summary>
+             <remarks>
+             <para>  /// The Sending Options allow you to specify parameters to be used when sending an email.<br />
+             The current options avialable are:
+            </para>
+             <list type="table">
+             <listheader>
+               <term>Property</term>
+               <description>Description</description>
+             </listheader>
+             <item>
+               <term>SendingPriority</term>
+               <description>Default: 100.<br />The SqlSender.GetPendingMessages() function will get messages ordered by priority (lowest first), followed by the email priority (High, Normal, Low).</description>
+             </item>
+             </list>
+             </remarks>
+             <example>
+             <code>
+             // Save an email message, to be returned first by the SqlSender.GetPendingMessages() function. 
+             
+             // Create client.
+             var client = new Mail4Net.Client.SmtpClientSqlServerClient();
+             
+             // Create message
+             var message = new System.Net.Mail.MailMessage();
+             
+             // Need to set message values here.
+              
+             // Set sending options.
+             var options = new SendingOptions {SendingPriority = 1};
+            
+             // Save message.
+             client.Send(message, options);
+             </code>
+             </example>
+        </member>
+        <member name="P:Mail4Net.Client.SendingOptions.SendingPriority">
+            <summary>
+            Gets or sets the sending priority.
+            </summary>
+            <value>The sending priority.</value>
+        </member>
+        <member name="T:Mail4Net.Client.XmlClient">
+            <summary>
+            XML Client.
+            </summary>
+            <remarks>
+            The XmlClient overloads the Send event, allowing the email to be saved to a file in XML format.
+            This requires a separate process to send the email.
+            </remarks>
+        </member>
+        <member name="M:Mail4Net.Client.XmlClient.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+            <Remarks>
+            This will use the default folder, specified in the config file.
+            </Remarks>
+        </member>
+        <member name="M:Mail4Net.Client.XmlClient.#ctor(System.String)">
+            <summary>
+            Overloaded constructor
+            </summary>
+            <param name="folder">folder to store files.</param>
+            <Remarks>
+            This will use the folder specified in the parameters.
+            </Remarks>
+        </member>
+        <member name="P:Mail4Net.Client.XmlClient.Folder">
+            <summary>
+            Get or Set the folder to save files to.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Enumerations">
+            <summary>
+            Mail4Net Enumerations.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Enumerations.EmailAddressType">
+            <summary>
+            Email Address Types
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailAddressType.From">
+            <summary>
+            Sender address.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailAddressType.To">
+            <summary>
+            To Addressee.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailAddressType.CC">
+            <summary>
+            CC Addressee.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailAddressType.Bcc">
+            <summary>
+            Bcc addressee.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailAddressType.ReplyTo">
+            <summary>
+            Reply To Addressee.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailAddressType.Sender">
+            <summary>
+            Sender Addressee.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Enumerations.EmailEncoding">
+            <summary>
+            Email Encodings.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailEncoding.Default">
+            <summary>
+            default encoding.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailEncoding.ASCII">
+            <summary>
+            ASCII encoding.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailEncoding.BigEndianUnicode">
+            <summary>
+            Big Endian (Unicode) encoding.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailEncoding.UTF32">
+            <summary>
+            UTF 32 encoding.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailEncoding.UTF7">
+            <summary>
+            UTF 7 encoding.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailEncoding.UTF8">
+            <summary>
+            UTF 8 encoding.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailEncoding.Unicode">
+            <summary>
+            Unicode encoding.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Enumerations.EmailPriority">
+            <summary>
+            Email Priorities.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailPriority.Low">
+            <summary>
+            Low priority.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailPriority.Normal">
+            <summary>
+            Normal priority.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailPriority.High">
+            <summary>
+            High priority.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Enumerations.EmailTransferEncoding">
+            <summary>
+            Email Transfer Encodings.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailTransferEncoding.Unknown">
+            <summary>
+            Unknown encoding.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailTransferEncoding.Base64">
+            <summary>
+            Base 64 encoding.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailTransferEncoding.EightBit">
+            <summary>
+            Eight bit encoding.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailTransferEncoding.QuotedPrintable">
+            <summary>
+            Quoted printable encoding.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Enumerations.EmailTransferEncoding.SevenBit">
+            <summary>
+            Seven bit encoding.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Extensions">
+            <summary>
+            Class Extensions.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Extensions.ToEml(System.Net.Mail.MailMessage)">
+            <summary>
+            Return as EML file stream.
+            </summary>
+            <param name="message">Message to be saved</param>
+            <returns>EML file as a string</returns>
+            <Remarks>
+            Information used for this function:
+            http://metdepuntnaarvoren.nl/create-eml-file-from-system.netmail.mailmessage
+            http://www.codeproject.com/Articles/32434/Adding-Save-functionality-to-Microsoft-Net-Mail-Ma
+            </Remarks>
+        </member>
+        <member name="M:Mail4Net.Helpers.Collections.GetDictionary(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Convert NameValue collection to Dictionary.
+            </summary>
+            <param name="itemCollection">Name value collection</param>
+            <returns>Populated dictionary</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.Collections.GetValue(System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            Get vlaue from NameValue collection
+            </summary>
+            <param name="collection">Collection to use</param>
+            <param name="key">Key to find</param>
+            <returns>Value or empty string</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetAttachments">
+            <summary>
+            Get attachments.
+            </summary>
+            <returns>Populated attachment entity</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetAddressees">
+            <summary>
+            Return address entity.
+            </summary>
+            <returns>Populate Addressee entities</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetAlternateViews">
+            <summary>
+            Return alternate views.
+            </summary>
+            <returns>Populate Alternate Views entities</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetContentType(System.Net.Mime.ContentType)">
+            <summary>
+            Get content type.
+            </summary>
+            <param name="contentType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetDeliveryNotifications">
+            <summary>
+            Return delivey notification entity.
+            </summary>
+            <returns>Populated delivery notification entity</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetEmailEntity">
+            <summary>
+            Get fully populated email entity.
+            </summary>
+            <returns>Fully populated email entity</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetEncodingId(System.Text.Encoding)">
+            <summary>
+            Return encoding enumeration.
+            </summary>
+            <param name="encoding">Encoding value</param>
+            <returns>Encoding id</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetHeaders">
+            <summary>
+            Return headers entity.
+            </summary>
+            <returns>Populated Headers entity</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetPriorityId">
+            <summary>
+            Return mail priority.
+            </summary>
+            <returns>Priority id</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetTransferEncodingId(System.Net.Mime.TransferEncoding)">
+            <summary>
+            Return transfer encoding enumeration.
+            </summary>
+            <param name="encoding">Encoding value</param>
+            <returns>Encoding id</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlClientHelper.GetLinkedResources(System.Net.Mail.LinkedResourceCollection)">
+            <summary>
+            Get linked resources.
+            </summary>
+            <param name="linkedResources">Linked resources collection object</param>
+            <returns>Populated Entity</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetAlternateView(Mail4Net.SqlDatabase.AlternateView)">
+            <summary>
+            Convert alternate view.
+            </summary>
+            <param name="view">Alternate view entity</param>
+            <returns>Populate alternate view object</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetAttachment(Mail4Net.SqlDatabase.Attachment)">
+            <summary>
+            Convert attachment.
+            </summary>
+            <param name="item">Attachment entity</param>
+            <returns>Populate attachment object</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetBccAddressees">
+            <summary>
+            Get 'Bcc' addressees
+            </summary>
+            <returns>Populated addressee collection</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetCcAddressees">
+            <summary>
+            Get 'CC' addressees
+            </summary>
+            <returns>Populated addressee collection</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetContentType(Mail4Net.SqlDatabase.ContentType)">
+            <summary>
+            Convert content type.
+            </summary>
+            <param name="entity">Content type entity</param>
+            <returns>Populated content type object</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetDeliveryNotification(Mail4Net.SqlDatabase.DeliveryNotification)">
+            <summary>
+            Convert delivery notification flags.
+            </summary>
+            <param name="notification">Delivery notification entity</param>
+            <returns>Notification flags</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetEncoding(System.Int32)">
+            <summary>
+            Convert encoding enumeration.
+            </summary>
+            <param name="encodingId">Encoding value</param>
+            <returns>Encoding id</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetPriority(System.Int32)">
+            <summary>
+            Convert mail priority.
+            </summary>
+            <param name="priorityId">Email priority id</param>
+            <returns>Priority</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetReplyToAddressees">
+            <summary>
+            Get reply to addressees
+            </summary>
+            <returns>Populated addressee collection</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetFromAddress">
+            <summary>
+            Get from address
+            </summary>
+            <returns>Populated address</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetSenderAddress">
+            <summary>
+            Get sender address
+            </summary>
+            <returns>Populated address</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetToAddressees">
+            <summary>
+            Get 'To' addressees
+            </summary>
+            <returns>Populated addressee collection</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetTransferEncoding(System.Int32)">
+            <summary>
+            Convert transfer encoding.
+            </summary>
+            <param name="encodingId">Transfer Encoding Id</param>
+            <returns>Transfer Encoding</returns>
+        </member>
+        <member name="M:Mail4Net.Helpers.SqlSenderHelper.GetMailMessage">
+            <summary>
+            Get mail message.
+            </summary>
+            <returns>Return populated mail message object</returns>
+        </member>
+        <member name="T:Mail4Net.Client.SqlServerClient">
+            <summary>
+            SQL Server Client.
+            </summary>
+            <remarks>
+            <para>
+            This replaces the System.Net.Mail SmtpClient class, saving emails to a SQL Server database.
+            </para>
+            <para>
+            A connection to the Mail4Net database must be added to the config file's ConnectionStrings tag.</para>
+            <para>
+            More information on connection strings can be found here: <a href="http://msdn.microsoft.com/en-gb/data/jj556606.aspx">http://msdn.microsoft.com/en-gb/data/jj556606.aspx</a>
+            </para>
+            </remarks>
+            <example>
+            <code>
+            &lt;ConnectionStrings&gt;
+            &lt;add name="Mail4Net" 
+                 connectionString="metadata=res://*/SqlDatabase.csdl|res://*/SqlDatabase.ssdl|res://*/SqlDatabase.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=[SERVER NAME];Initial Catalog=Mail4Net;Integrated Security=False;User ID=[USERNAME];Password=[PASSWORD];MultipleActiveResultSets=True&quot;"
+                 providerName="System.Data.EntityClient" /&gt;
+            &lt;/ConnectionStrings&gt;
+            </code>
+            </example>
+        </member>
+        <member name="T:Mail4Net.Interface.ISqlClient">
+            <summary>
+            Interface ISqlClient
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlClient.Send(System.Net.Mail.MailMessage,Mail4Net.Client.SendingOptions)">
+            <summary>
+            Save email message to database.
+            </summary>
+            <param name="message">MailMessage object</param>
+            <param name="options">Sending options</param>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlClient.Send(System.String,System.String,System.String,System.String,Mail4Net.Client.SendingOptions)">
+            <summary>
+            Save email message to database.
+            </summary>
+            <param name="from">Address email is from</param>
+            <param name="recipients">Address of recipient</param>
+            <param name="subject">Email message subject</param>
+            <param name="body">Email message body</param>
+            <param name="options">Sending options</param>
+        </member>
+        <member name="M:Mail4Net.Client.SqlServerClient.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Client.SqlServerClient"/> class.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Client.SqlServerClient.#ctor(Mail4Net.SqlRepository.Interfaces.IUnitOfWork)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Client.SqlServerClient"/> class.
+            </summary>
+            <param name="unitOfWork">The unit of work to use.</param>
+        </member>
+        <member name="M:Mail4Net.Client.SqlServerClient.Send(System.Net.Mail.MailMessage)">
+            <summary>
+            Save mail message to SQL Server database.
+            </summary>
+            <param name="message">MailMessage object to save</param>
+        </member>
+        <member name="M:Mail4Net.Client.SqlServerClient.Send(System.Net.Mail.MailMessage,Mail4Net.Client.SendingOptions)">
+            <summary>
+            Save email message to database.
+            </summary>
+            <param name="message">MailMessage object</param>
+            <param name="options">Sending options</param>
+        </member>
+        <member name="M:Mail4Net.Client.SqlServerClient.Send(System.String,System.String,System.String,System.String)">
+            <summary>
+            Save mail message to SQL Server database.
+            </summary>
+            <param name="from">Address email is from</param>
+            <param name="recipients">Address of recipient</param>
+            <param name="subject">Email message subject</param>
+            <param name="body">Email message body</param>
+        </member>
+        <member name="M:Mail4Net.Client.SqlServerClient.Send(System.String,System.String,System.String,System.String,Mail4Net.Client.SendingOptions)">
+            <summary>
+            Save email message to database.
+            </summary>
+            <param name="from">Address email is from</param>
+            <param name="recipients">Address of recipient</param>
+            <param name="subject">Email message subject</param>
+            <param name="body">Email message body</param>
+            <param name="options">Sending options</param>
+        </member>
+        <member name="T:Mail4Net.Interface.ISqlSender">
+            <summary>
+            Interface ISqlSender
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.Delete(System.Guid)">
+            <summary>
+            Delete email message from database.
+            </summary>
+            <param name="id">Message id</param>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.Delete(System.Int32)">
+            <summary>
+            Delete email message from database.
+            </summary>
+            <param name="days">Delete messages sent before the specified number of days ago</param>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.Delete(System.DateTime,System.DateTime)">
+            <summary>
+            Delete email message from database that were sent within the specified dates.
+            </summary>
+            <param name="startDate">Delete messages sent after this date</param>
+            <param name="endDate">Delete messages sent before this date</param>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.GetMessage(System.Guid)">
+            <summary>
+            Get pending messages ordered by priority.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>Populated mail message if email found, otherwise null.</returns>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.GetMessageCount">
+            <summary>
+            Get the total number of messages in the database.
+            </summary>
+            <returns>Count of mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.GetMessageCount(Mail4Net.Enumerations.EmailPriority)">
+            <summary>
+            Get the total number of messages in the database.
+            </summary>
+            <param name="priority">Sends emails of the specified priority</param>
+            <returns>Count of mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.GetPendingMessageCount">
+            <summary>
+            Get pending (unsent) message count.
+            </summary>
+            <remarks>
+            Messages are returned by sending priority, mail priority, then the date added.
+            </remarks>
+            <returns>Count of pending mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.GetPendingMessageCount(Mail4Net.Enumerations.EmailPriority)">
+            <summary>
+            Get pending (unsent) message count for the specified mail priority.
+            </summary>
+            <remarks>
+            Messages are returned by sending priority, mail priority, then the date added.
+            </remarks>
+            <param name="priority">Sends emails of the specified priority</param>
+            <returns>Count of pending mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.GetPendingMessages">
+            <summary>
+            Get all pending messages.
+            </summary>
+            <remarks>
+            Messages are returned by sending priority, mail priority, then the date added.
+            </remarks>
+            <returns>List of mail messages</returns>  
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.GetPendingMessages(System.Int32)">
+            <summary>
+            Get pending messages ordered by priority.
+            </summary>
+            <param name="count">Maximum number of records to return</param>
+            <returns>List of mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.GetPendingMessages(Mail4Net.Enumerations.EmailPriority)">
+            <summary>
+            Get all pending messages.
+            </summary>
+            <remarks>
+            Messages are returned by sending priority, then the date added.
+            </remarks>
+            <param name="priority">Priority of emails to get</param>
+            <returns>List of mail messages</returns>  
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.GetPendingMessages(Mail4Net.Enumerations.EmailPriority,System.Int32)">
+            <summary>
+            Get pending messages ordered by priority.
+            </summary>
+            <param name="priority">Priority of emails to get</param>
+            <param name="count">Maximum number of records to return</param>
+            <returns>List of mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.MarkAsSent(System.Guid)">
+            <summary>
+            Update message to show it has been sent.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.SendPendingMessages">
+            <summary>
+            Send pending messages.
+            </summary>
+            <remarks>
+            Messages are sent by sending priority, mail priority, then the date added.
+            </remarks>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.SendPendingMessages(System.Int32)">
+            <summary>
+            Send pending messages.
+            </summary>
+            <remarks>
+            Messages are sent by sending priority, mail priority, then the date added.
+            Emails are taken from the front of the queue.
+            </remarks>
+            <param name="count">Number of emails to send</param>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.SendPendingMessages(Mail4Net.Enumerations.EmailPriority)">
+            <summary>
+            Send pending messages.
+            </summary>
+            <remarks>
+            Messages are sent by sending priority, mail priority, then the date added.
+            </remarks>
+            <param name="priority">Sends emails of the specified priority</param>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlSender.SendPendingMessages(Mail4Net.Enumerations.EmailPriority,System.Int32)">
+            <summary>
+            Send pending messages.
+            </summary>
+            <remarks>
+            Messages are sent by sending priority, mail priority, then the date added.
+            </remarks>
+            <param name="priority">Sends emails of the specified priority</param>
+            <param name="count">Number of emails to send</param>
+        </member>
+        <member name="T:Mail4Net.Sender.SqlSender">
+            <summary>
+            SQL Sender Client.
+            </summary>
+            <remarks>
+            <para>
+            This library reads and updates messages in the SQL Server database.<br /><br />
+            To use this class, configuration settings are required to be added to the config file.
+            More information on the settings required is available on the <see href="http://www.mail4net.com">Mail4Net website</see>.</para>
+            <para>
+            A connection to the Mail4Net database must be added to the config file's ConnectionStrings tag.</para>
+            <para>
+            More information on connection strings can be found here: <a href="http://msdn.microsoft.com/en-gb/data/jj556606.aspx">http://msdn.microsoft.com/en-gb/data/jj556606.aspx</a>
+            </para>
+            </remarks>
+            <example>
+            <code>
+            &lt;ConnectionStrings&gt;
+            &lt;add name="Mail4Net" 
+                 connectionString="metadata=res://*/SqlDatabase.csdl|res://*/SqlDatabase.ssdl|res://*/SqlDatabase.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=[SERVER NAME];Initial Catalog=Mail4Net;Integrated Security=False;User ID=[USERNAME];Password=[PASSWORD];MultipleActiveResultSets=True&quot;"
+                 providerName="System.Data.EntityClient" /&gt;
+            &lt;/ConnectionStrings&gt;
+            </code>
+            </example>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Sender.SqlSender"/> class.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.#ctor(Mail4Net.SqlRepository.Interfaces.IUnitOfWork)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Sender.SqlSender"/> class.
+            </summary>
+            <param name="unitOfWork">The unit of work.</param>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.Delete(System.Guid)">
+            <summary>
+            Delete email message from database.
+            </summary>
+            <param name="id">Message id</param>
+            <exception cref="T:System.Net.Mail.SmtpException">Unable to remove email message from database</exception>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.Delete(System.Int32)">
+            <summary>
+            Delete email message from database.
+            </summary>
+            <param name="days">Delete messages sent before the specified number of days ago</param>
+            <exception cref="T:System.Net.Mail.SmtpException">Unable to remove email message(s) from database</exception>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.Delete(System.DateTime,System.DateTime)">
+            <summary>
+            Delete email message from database that were sent within the specified dates.
+            </summary>
+            <param name="startDate">Delete messages sent after this date</param>
+            <param name="endDate">Delete messages sent before this date</param>
+            <exception cref="T:System.Net.Mail.SmtpException">Unable to remove email message(s) from database</exception>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.GetMessage(System.Guid)">
+            <summary>
+            Get pending messages ordered by priority.
+            </summary>
+            <param name="id">Id of the email to find</param>
+            <returns>Populated mail message if email found, otherwise null.</returns>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.GetMessageCount">
+            <summary>
+            Get the total number of messages in the database.
+            </summary>
+            <returns>Count of mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.GetMessageCount(Mail4Net.Enumerations.EmailPriority)">
+            <summary>
+            Get the total number of messages in the database.
+            </summary>
+            <param name="priority">Sends emails of the specified priority</param>
+            <returns>Count of mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.GetPendingMessageCount">
+            <summary>
+            Get pending (unsent) message count.
+            </summary>
+            <returns>Count of pending mail messages</returns>
+            <remarks>Messages are returned by sending priority, mail priority, then the date added.</remarks>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.GetPendingMessageCount(Mail4Net.Enumerations.EmailPriority)">
+            <summary>
+            Get pending (unsent) message count for the specified mail priority.
+            </summary>
+            <param name="priority">Sends emails of the specified priority</param>
+            <returns>Count of pending mail messages</returns>
+            <remarks>Messages are returned by sending priority, mail priority, then the date added.</remarks>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.GetPendingMessages">
+            <summary>
+            Get all pending messages.
+            </summary>
+            <returns>List of mail messages</returns>
+            <remarks>Messages are returned by sending priority, mail priority, then the date added.</remarks>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.GetPendingMessages(System.Int32)">
+            <summary>
+            Get pending messages ordered by priority.
+            </summary>
+            <param name="count">Maximum number of records to return</param>
+            <returns>List of mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.GetPendingMessages(Mail4Net.Enumerations.EmailPriority)">
+            <summary>
+            Get all pending messages.
+            </summary>
+            <param name="priority">Priority of emails to get</param>
+            <returns>List of mail messages</returns>
+            <remarks>Messages are returned by sending priority, then the date added.</remarks>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.GetPendingMessages(Mail4Net.Enumerations.EmailPriority,System.Int32)">
+            <summary>
+            Get pending messages ordered by priority.
+            </summary>
+            <param name="priority">Priority of emails to get</param>
+            <param name="count">Maximum number of records to return</param>
+            <returns>List of mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.MarkAsSent(System.Guid)">
+            <summary>
+            Update message to show it has been sent.
+            </summary>
+            <param name="id">The message identifier.</param>
+            <exception cref="T:System.Net.Mail.SmtpException">Unable to update email message in database</exception>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.SendPendingMessages">
+            <summary>
+            Send pending messages.
+            </summary>
+            <remarks>Messages are sent by sending priority, mail priority, then the date added.</remarks>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.SendPendingMessages(System.Int32)">
+            <summary>
+            Send pending messages.
+            </summary>
+            <param name="count">Number of emails to send</param>
+            <remarks>Messages are sent by sending priority, mail priority, then the date added.
+            Emails are taken from the front of the queue.</remarks>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.SendPendingMessages(Mail4Net.Enumerations.EmailPriority)">
+            <summary>
+            Send pending messages.
+            </summary>
+            <param name="priority">Sends emails of the specified priority</param>
+            <remarks>Messages are sent by sending priority, mail priority, then the date added.</remarks>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.SendPendingMessages(Mail4Net.Enumerations.EmailPriority,System.Int32)">
+            <summary>
+            Send pending messages.
+            </summary>
+            <param name="priority">Sends emails of the specified priority</param>
+            <param name="count">Number of emails to send</param>
+            <exception cref="T:System.Exception">An error was encountered trying to send email.</exception>
+            <remarks>Messages are sent by sending priority, mail priority, then the date added.</remarks>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.LogEvent(Mail4Net.Sender.SqlSender.EventType,System.Guid,System.String)">
+            <summary>
+            Add entry to email event log.
+            </summary>
+            <param name="type">Log type</param>
+            <param name="id">Message id</param>
+            <param name="message">Message text</param>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.GetMessages(System.Nullable{Mail4Net.Enumerations.EmailPriority},System.Int32)">
+            <summary>
+            Get pending messages ordered by priority.
+            </summary>
+            <param name="priority">Priority of emails to get</param>
+            <param name="count">Maximum number of records to return</param>
+            <returns>List of mail messages</returns>
+        </member>
+        <member name="M:Mail4Net.Sender.SqlSender.SendMessages(System.Nullable{Mail4Net.Enumerations.EmailPriority},System.Int32)">
+            <summary>
+            Send pending messages.
+            </summary>
+            <param name="priority">Sends emails of the specified priority</param>
+            <param name="count">Number of emails to send</param>
+            <exception cref="T:System.Exception">An error was encountered trying to send email.</exception>
+            <remarks>Messages are sent by sending priority, mail priority, then the date added.</remarks>
+        </member>
+        <member name="F:Mail4Net.Sender.SqlSender.EventType.AttemptDelivery">
+            <summary>
+            Attempt delivery of email.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Sender.SqlSender.EventType.ExceptionGeneral">
+            <summary>
+            ExceptionGeneral encountered sending email.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Sender.SqlSender.EventType.ExceptionRecipients">
+            <summary>
+            Invalid recipients.
+            </summary>
+        </member>
+        <member name="F:Mail4Net.Sender.SqlSender.EventType.Sent">
+            <summary>
+            Email was sent.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Client.SmtpClient">
+             <summary>
+             SMTP Client.
+             </summary>
+             <remarks>
+             <para>An enhanced wrapper class for the .NET SmtpClient class.<br />
+             The sending functionality allows for retries in the event of the following SMTP Status Codes:
+            </para>
+             <list type="bullet">
+               <item>MailboxBusy</item>
+               <item>MailboxUnavailable</item>
+               <item>TransactionFailed</item>
+             </list>
+             <para>To include automatic retry attempts, the following settings are required to be added to the config file:</para>
+             <list type="table">
+             <listheader>
+               <term>Value</term>
+               <description>Settings</description>
+             </listheader>
+             <item>
+               <term>Mail4Net_Retry</term>
+               <description>True: Retry delivery.<br />False: Do not reattempt delivery.</description>
+             </item>
+             <item>
+               <term>Mail4Net_Retry_Wait</term>
+               <description>Number of milliseconds to wait before attempting the resend again.</description>
+             </item>
+             </list>
+             <para>If the retry attempt is unsuccessful, an exception will be thrown.</para>
+             </remarks>
+             <example>
+             <code>
+             // Create client.
+             var client = new Mail4Net.Client.SmtpClient();
+             
+             // Send message.
+             client.Send("from@from.com", "to@to.com", "Subject Line", "Hello World!");
+             </code>
+             </example>
+        </member>
+        <member name="M:Mail4Net.Client.SmtpClient.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Client.SmtpClient"/> class.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Client.SmtpClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Net.Mail.SmtpClient" /> class that sends e-mail by using the specified SMTP server.
+            </summary>
+            <param name="host">A <see cref="T:System.String" /> that contains the name or IP address of the host computer used for SMTP transactions.</param>
+        </member>
+        <member name="M:Mail4Net.Client.SmtpClient.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Net.Mail.SmtpClient" /> class that sends e-mail by using the specified SMTP server and port.
+            </summary>
+            <param name="host">A <see cref="T:System.String" /> that contains the name or IP address of the host used for SMTP transactions.</param>
+            <param name="port">An <see cref="T:System.Int32" /> greater than zero that contains the port to be used on <paramref name="host" />.</param>
+        </member>
+        <member name="M:Mail4Net.Client.SmtpClient.Send(System.Net.Mail.MailMessage)">
+            <summary>
+            Sends the specified message to an SMTP server for delivery.
+            </summary>
+            <param name="message">A <see cref="T:System.Net.Mail.MailMessage" /> that contains the message to send.</param>
+        </member>
+        <member name="M:Mail4Net.Client.SmtpClient.Send(System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends the specified e-mail message to an SMTP server for delivery. The message sender, recipients, subject, and message body are specified using <see cref="T:System.String" /> objects.
+            </summary>
+            <param name="from">A <see cref="T:System.String" /> that contains the address information of the message sender.</param>
+            <param name="recipients">A <see cref="T:System.String" /> that contains the addresses that the message is sent to.</param>
+            <param name="subject">A <see cref="T:System.String" /> that contains the subject line for the message.</param>
+            <param name="body">A <see cref="T:System.String" /> that contains the message body.</param>
+        </member>
+        <member name="T:Mail4Net.Templates.AddresseeList">
+            <summary>
+            Class AddresseeList.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Templates.AddresseeList.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Templates.AddresseeList"/> class.
+            </summary>
+        </member>
+        <member name="P:Mail4Net.Templates.AddresseeList.From">
+            <summary>
+            From addressee.
+            </summary>
+        </member>
+        <member name="P:Mail4Net.Templates.AddresseeList.To">
+            <summary>
+            To addressees.
+            </summary>
+        </member>
+        <member name="P:Mail4Net.Templates.AddresseeList.CC">
+            <summary>
+            CC addressees.
+            </summary>
+        </member>
+        <member name="P:Mail4Net.Templates.AddresseeList.Bcc">
+            <summary>
+            Bcc addressees.
+            </summary>
+        </member>
+        <member name="P:Mail4Net.Templates.AddresseeList.ReplyToList">
+            <summary>
+            Reply to addressees.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Interface.ISqlTemplate">
+            <summary>
+            Interface ISqlTemplate
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlTemplate.GetMessage(System.Guid,System.Guid)">
+            <summary>
+            Get populated mail message.
+            </summary>
+            <param name="emailTemplateId">The email template identifier.</param>
+            <param name="languageId">The language identifier.</param>
+            <returns>Populated mail message object</returns>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlTemplate.GetMessage(System.Guid,System.Guid,Mail4Net.Templates.AddresseeList)">
+            <summary>
+            Get populated mail message.
+            </summary>
+            <param name="emailTemplateId">The email template identifier.</param>
+            <param name="languageId">The language identifier.</param>
+            <param name="addressees">Addressees to use</param>
+            <returns>Populated mail message object</returns>
+        </member>
+        <member name="M:Mail4Net.Interface.ISqlTemplate.GetMessage(System.Guid,System.Guid,Mail4Net.Templates.AddresseeList,Mail4Net.Templates.Keywords)">
+            <summary>
+            Get populated mail message.
+            </summary>
+            <param name="emailTemplateId">The email template identifier.</param>
+            <param name="languageId">The language identifier.</param>
+            <param name="addressees">Addressees to use</param>
+            <param name="keywords">Keywords to use</param>
+            <returns>Populated mail message object</returns>
+        </member>
+        <member name="P:Mail4Net.Interface.ISqlTemplate.Addressees">
+            <summary>
+            Get or set list of addressees.
+            </summary>
+        </member>
+        <member name="P:Mail4Net.Interface.ISqlTemplate.Keywords">
+            <summary>
+            Get or set keywords to be used.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Templates.Keywords">
+            <summary>
+            Keywords used to update placeholders.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Templates.Keywords.GetValue(System.String)">
+            <summary>
+            Gets the value.
+            </summary>
+            <param name="keyword">The keyword.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Mail4Net.Templates.Keywords.Add(Mail4Net.Templates.Keyword)">
+            <summary>
+            Add keyword to collection.
+            </summary>
+            <param name="keyword">Keyword object to add</param>
+        </member>
+        <member name="M:Mail4Net.Templates.Keywords.Add(System.String,System.String)">
+            <summary>
+            Add keyword to collection.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Templates.Keywords.Remove(System.Int32)">
+            <summary>
+            Remove keyword.
+            </summary>
+            <param name="index">Index of keyword to remove</param>
+        </member>
+        <member name="P:Mail4Net.Templates.Keywords.Item(System.String)">
+            <summary>
+            Get item for specified keyword.
+            </summary>
+            <param name="keyword">Keyword of item to return</param>
+            <returns>Keyword from specified position</returns>
+        </member>
+        <member name="P:Mail4Net.Templates.Keywords.Item(System.Int32)">
+            <summary>
+            Return keyword from specific index.
+            </summary>
+            <param name="index">Index of keyword</param>
+            <returns>Keyword from specified position</returns>
+        </member>
+        <member name="T:Mail4Net.Templates.Keyword">
+            <summary>
+            Class Keyword.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Templates.Keyword.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Templates.Keyword"/> class.
+            </summary>
+            <remarks>
+            <para>Keywords hold the placeholder text and the value to placeholder is to be updated to.</para>
+            </remarks>
+        </member>
+        <member name="M:Mail4Net.Templates.Keyword.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mail4Net.Templates.Keyword"/> class.
+            </summary>
+            <param name="placeHolder">Placeholder text value.</param>
+            <param name="value">Value to update placeholder to.</param>
+        </member>
+        <member name="P:Mail4Net.Templates.Keyword.Placeholder">
+            <summary>
+            Placeholder to update text value.
+            </summary>
+        </member>
+        <member name="P:Mail4Net.Templates.Keyword.Value">
+            <summary>
+            Value to replace the placeholder with.
+            </summary>
+        </member>
+        <member name="T:Mail4Net.Templates.SqlTemplate">
+            <summary>
+            Class SqlTemplate.
+            </summary>
+            <remarks>
+            Contains methods to get the email template file ready for sending.<br/><br/>
+            The template can be pre-populated with addressees and keywords.
+            </remarks>
+        </member>
+        <member name="M:Mail4Net.Templates.SqlTemplate.#ctor">
+            <summary>
+            Email sender.
+            </summary>
+        </member>
+        <member name="M:Mail4Net.Templates.SqlTemplate.#ctor(Mail4Net.SqlRepository.Interfaces.IUnitOfWork)">
+            <summary>
+            Email sender.
+            </summary>
+            <param name="unitOfWork">Unit of Work to use</param>
+        </member>
+        <member name="M:Mail4Net.Templates.SqlTemplate.GetMessage(System.Guid,System.Guid)">
+            <summary>
+            Get populated mail message.
+            </summary>
+            <param name="emailTemplateId">The email template identifier.</param>
+            <param name="languageId">The language identifier.</param>
+            <returns>Populated mail message object</returns>
+        </member>
+        <member name="M:Mail4Net.Templates.SqlTemplate.GetMessage(System.Guid,System.Guid,Mail4Net.Templates.AddresseeList)">
+            <summary>
+            Get populated mail message and populate with the specified addressees.
+            </summary>
+            <param name="emailTemplateId">The email template identifier.</param>
+            <param name="languageId">The language identifier.</param>
+            <param name="addressees">Addressees to use</param>
+            <returns>Populated mail message object</returns>
+        </member>
+        <member name="M:Mail4Net.Templates.SqlTemplate.GetMessage(System.Guid,System.Guid,Mail4Net.Templates.AddresseeList,Mail4Net.Templates.Keywords)">
+            <summary>
+            Get populated mail message and populate with the specified addressees and keywords.
+            </summary>
+            <param name="emailTemplateId">The email template identifier.</param>
+            <param name="languageId">The language identifier.</param>
+            <param name="addressees">Addressees to use</param>
+            <param name="keywords">Keywords to use</param>
+            <returns>Populated mail message object</returns>
+        </member>
+        <member name="M:Mail4Net.Templates.SqlTemplate.PopulateMailMessage(System.Guid,System.Guid)">
+            <summary>
+            Populate message from template.
+            </summary>
+            <param name="templateId">The template identifier.</param>
+            <param name="languageId">The language identifier.</param>
+            <returns>Populated message</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            templateId;Template not found
+            or
+            templateId;The template does not have any contents for the language selected.
+            </exception>
+        </member>
+        <member name="M:Mail4Net.Templates.SqlTemplate.UpdatePlaceholders(System.String)">
+            <summary>
+            Update placeholders in the mail message using the values in the keyword object.
+            </summary>
+            <param name="text">Text to update with the keywords.</param>
+            <returns>Text updated with the inserted keywords.</returns>
+        </member>
+        <member name="P:Mail4Net.Templates.SqlTemplate.Addressees">
+            <summary>
+            Get or set list of addressees.
+            </summary>
+            <value>The addressees.</value>
+        </member>
+        <member name="P:Mail4Net.Templates.SqlTemplate.Keywords">
+            <summary>
+            Get or set keywords to be used.
+            </summary>
+            <value>The keywords.</value>
+        </member>
+    </members>
+</doc>

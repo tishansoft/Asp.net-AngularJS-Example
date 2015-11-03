@@ -1,0 +1,16 @@
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\bin\Release\MCFina.BusinessObjects.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\bin\Release\MCFina.BusinessObjects.pdb
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\bin\Release\DataAnnotationsExtensions.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\bin\Release\MVC Foolproof Validation.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\obj\Release\MCFina.BusinessObjects.csprojResolveAssemblyReference.cache
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\obj\Release\MCFina.BusinessObjects.dll
+E:\Fina\McFinaPortal\MCFina Gift Site Development\Main\MCFina.BusinessObjects\obj\Release\MCFina.BusinessObjects.pdb
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Release\MCFina.BusinessObjects.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Release\MCFina.BusinessObjects.pdb
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Release\DataAnnotationsExtensions.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Release\ExpressiveAnnotations.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Release\MVC Foolproof Validation.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\bin\Release\ExpressiveAnnotations.xml
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\obj\Release\MCFina.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\obj\Release\MCFina.BusinessObjects.dll
+D:\Clients\MCFina\Development\Main\MCFina.BusinessObjects\obj\Release\MCFina.BusinessObjects.pdb

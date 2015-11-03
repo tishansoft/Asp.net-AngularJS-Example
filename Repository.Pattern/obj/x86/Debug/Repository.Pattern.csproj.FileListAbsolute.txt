@@ -1,0 +1,5 @@
+D:\Training\VS2015\ECommerce\Development\Repository.Pattern\bin\x86\Debug\Repository.Pattern.dll.config
+D:\Training\VS2015\ECommerce\Development\Repository.Pattern\bin\x86\Debug\Repository.Pattern.dll
+D:\Training\VS2015\ECommerce\Development\Repository.Pattern\bin\x86\Debug\Repository.Pattern.pdb
+D:\Training\VS2015\ECommerce\Development\Repository.Pattern\obj\x86\Debug\Repository.Pattern.dll
+D:\Training\VS2015\ECommerce\Development\Repository.Pattern\obj\x86\Debug\Repository.Pattern.pdb

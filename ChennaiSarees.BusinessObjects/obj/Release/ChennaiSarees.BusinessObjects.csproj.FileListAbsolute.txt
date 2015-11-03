@@ -1,0 +1,13 @@
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Release\ChennaiSarees.BusinessObjects.dll.config
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Release\ChennaiSarees.BusinessObjects.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Release\ChennaiSarees.BusinessObjects.pdb
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Release\DataAnnotationsExtensions.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Release\EntityFramework.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Release\EntityFramework.SqlServer.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Release\MVC Foolproof Validation.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Release\EntityFramework.xml
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Release\EntityFramework.SqlServer.xml
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\bin\Release\ExpressiveAnnotations.xml
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\obj\Release\ChennaiSarees.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\obj\Release\ChennaiSarees.BusinessObjects.dll
+D:\Training\VS2015\ECommerce\Development\ChennaiSarees.BusinessObjects\obj\Release\ChennaiSarees.BusinessObjects.pdb
